@@ -46,7 +46,7 @@ const SuccessStories = () => {
             </div>
             <div className="bg-navy-blue w-full max-w-[82rem] rounded-[3.2rem] h-56 mt-8 mb-20 flex flex-wrap items-center justify-center py-4">
                 {[1,1,1,1,1,1,1,1].map((_, index) => (
-                    <div className="flex items-center justify-center h-20 w-1/4">
+                    <div key={index} className="flex items-center justify-center h-20 w-1/4">
                         <p className="text-3xl uppercase font-bold text-white">
                             facebook
                         </p>

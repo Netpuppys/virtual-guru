@@ -38,7 +38,7 @@ const VideoSection = () => {
         <p className="max-w-[60rem] text-white text-2xl text-wrap">
             If your answer to any of the above questions is a yes, then let me tell you something - {" "}
             <span className="text-theme-orange font-semibold">
-                IT DOESN'T MATTER!
+                IT DOESN&apos;T MATTER!
             </span>{" "}
             Everyone can grow.{" "}
             <span className="text-theme-orange font-semibold">

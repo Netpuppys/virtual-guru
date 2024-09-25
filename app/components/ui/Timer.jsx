@@ -43,14 +43,14 @@ const Timer = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center space-x-2 py-2 px-4 w-[28rem] mt-[1.3rem] h-[4.6rem] bg-[#d9d9d9] rounded-full">
-      <span className="text-4xl font-bold text-gray-700">{timeLeft.days?.toString().padStart(2, '0')}</span>
-      <span className="text-4xl font-bold text-theme-orange">:</span>
-      <span className="text-4xl font-bold text-gray-700">{timeLeft.hours?.toString().padStart(2, '0')}</span>
-      <span className="text-4xl font-bold text-theme-orange">:</span>
-      <span className="text-4xl font-bold text-gray-700">{timeLeft.minutes?.toString().padStart(2, '0')}</span>
-      <span className="text-4xl font-bold text-theme-orange">:</span>
-      <span className="text-4xl font-bold text-gray-700">{timeLeft.seconds?.toString().padStart(2, '0')}</span>
+    <div className="flex items-center justify-center space-x-2 py-2 px-4 w-[17rem] lg:w-[28rem] mt-[1.3rem] h-[3rem] lg:h-[4.6rem] bg-[#d9d9d9] rounded-full">
+      <span className="text-[2rem] lg:text-4xl font-bold text-gray-700">{timeLeft.days?.toString().padStart(2, '0')}</span>
+      <span className="text-[2rem] lg:text-4xl font-bold text-theme-orange">:</span>
+      <span className="text-[2rem] lg:text-4xl font-bold text-gray-700">{timeLeft.hours?.toString().padStart(2, '0')}</span>
+      <span className="text-[2rem] lg:text-4xl font-bold text-theme-orange">:</span>
+      <span className="text-[2rem] lg:text-4xl font-bold text-gray-700">{timeLeft.minutes?.toString().padStart(2, '0')}</span>
+      <span className="text-[2rem] lg:text-4xl font-bold text-theme-orange">:</span>
+      <span className="text-[2rem] lg:text-4xl font-bold text-gray-700">{timeLeft.seconds?.toString().padStart(2, '0')}</span>
     </div>
   );
 };

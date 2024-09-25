@@ -59,34 +59,34 @@ const points = [
 const WhatYouGet = () => {
   return (
     <div className="w-full bg-navy-blue">
-        <div className="w-full rounded-[3rem] px-16 pb-20 bg-white flex flex-col items-center pt-16">
-            <p className="tracking-wide text-navy-blue text-5xl font-extrabold mb-6">
+        <div className="w-full rounded-[3rem] px-10 lg:px-16 pb-20 bg-white flex flex-col items-center pt-16">
+            <p className="tracking-wide text-navy-blue text-5xl text-center lg:text-left font-black mb-6 leading-snug md:leading-none">
                 What You Get with{" "}
-                <span className="text-theme-orange">
+                <span className="text-theme-orange font-black">
                     CGP ACT
                 </span>
             </p>
-            <p className="text-navy-blue max-w-[50rem] text-center text-[1.6rem] font-medium">
+            <p className="text-navy-blue max-w-[50rem] lg:text-center text-[1.2rem] lg:text-[1.6rem] font-medium">
                 {subTitle}
             </p>
-            <div className="w-full mt-10 flex flex-wrap gap-x-6 gap-y-10">
+            <div className="w-full mt-10 flex flex-wrap lg:gap-x-6 gap-y-6 lg:gap-y-10">
                 {cards.map((item, index) => (
-                    <div className="rounded-xl group relative overflow-hidden w-[31%] aspect-[2.2/1]" key={index}>
+                    <div className="rounded-xl group relative overflow-hidden w-full lg:w-[31%] aspect-[2.2/1]" key={index}>
                         <Image
                             src={item.image}
                             className="w-full h-full object-cover"
                             alt={item.title}
                         />
-                        <div className="absolute z-10 h-full bg-black bg-opacity-40 opacity-50 group-hover:animate-slide-in group-hover:opacity-100 -bottom-full group-hover:bottom-0 w-full pb-5 left-0 px-5 flex flex-col items-center justify-end">
+                        <div className="absolute z-10 h-full bg-black bg-opacity-40 lg:opacity-50 lg:group-hover:animate-slide-in group-hover:opacity-100 bottom-0 lg:-bottom-full lg:group-hover:bottom-0 w-full pb-5 left-0 px-5 flex flex-col items-center justify-end">
                             <div className="w-full flex items-center gap-3">
                                 <p className="aspect-square bg-white rounded-full w-6 h-6 flex items-center justify-center mt-2">
                                     <GiCheckMark />
                                 </p>
-                                <p className="text-white font-helveticaNow text-2xl font-bold">
+                                <p className="text-white font-helveticaNow text-[1.2rem] lg:text-2xl font-bold">
                                     {item.title}
                                 </p>
                             </div>
-                            <p className="text-white text-lg leading-snug pl-[2.25rem] pt-2 text-wrap">
+                            <p className="text-white text-[1rem] lg:text-lg leading-snug pl-[2.25rem] pt-2 text-wrap">
                                 {item.para}
                             </p>
                         </div>
@@ -95,27 +95,27 @@ const WhatYouGet = () => {
             </div>
         </div>
 
-        <div className="pt-32 pb-20 flex flex-col items-center justify-start">
-            <p className="text-4xl font-extrabold font-helveticaNow text-white tracking-widest">
+        <div className="pt-16 lg:pt-32 pb-20 flex flex-col items-center justify-start px-[1.75rem] lg:px-0">
+            <p className="text-4xl text-center lg:text-left font-extrabold font-helveticaNow text-white tracking-widest leading-normal lg:leading-none">
                 Why Choose{" "}
-                <span className="text-theme-orange">
+                <span className="text-theme-orange block lg:inline">
                     CGP ACT Program?
                 </span>
             </p>
-            <div className="w-[35rem] my-8 h-[1px] bg-theme-orange rounded-full"></div>
+            <div className="max-w-[35rem] w-full my-8 h-[1px] bg-theme-orange rounded-full"></div>
 
-            <p className="font-medium text-white text-2xl max-w-[81rem] text-center">
+            <p className="font-medium text-white text-[1.25rem] lg:text-2xl max-w-[81rem] lg:text-center">
                 {subTitle2}
             </p>
 
-            <div className="w-full flex flex-col gap-7 max-w-[87rem] mt-12">
+            <div className="w-full flex flex-col gap-7 px-10 max-w-[87rem] mt-12">
                 {points.map((item, index) => (
-                    <div key={index} className="px-12 py-7 flex items-start gap-8 rounded-xl border border-white">
-                        <p className="h-8 aspect-square text-xl flex items-center justify-center bg-white rounded-full">
+                    <div key={index} className="px-[0.8rem] lg:px-12 py-7 flex items-start gap-4 lg:gap-8 rounded-xl border border-white">
+                        <p className="h-5 lg:h-8 aspect-square text-sm lg:text-xl flex items-center justify-center bg-white rounded-full">
                             <GiCheckMark />
                         </p>
-                        <p className="text-white text-2xl font-medium">
-                            <span className="font-extrabold">
+                        <p className="text-white text-base lg:text-2xl font-medium">
+                            <span className="font-black">
                                 {item.title} -{" "}
                             </span>
                             {item.para}

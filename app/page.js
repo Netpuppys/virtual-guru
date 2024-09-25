@@ -9,7 +9,7 @@ import WhatYouGet from "./components/WhatYouGet";
 
 export default function Home() {
   return (
-    <div classname="w-screen min-h-screen">
+    <div className="w-screen min-h-screen overflow-x-hidden">
       <Hero />
       <VideoSection />
       <WhatYouGet />

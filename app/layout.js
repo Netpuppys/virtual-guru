@@ -1,4 +1,4 @@
-import { Poppins } from "next/font/google";git 
+import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -16,6 +16,12 @@ const helveticaNow = localFont({
   weight: "100 200 300 400 500 600 700 800 900",
 });
 
+const TTChocolates = localFont({
+  src: "./fonts/TTChocolatesRegular.otf",
+  variable: "--font-tt-chocolates",
+  weight: "400 500 600 700"
+})
+
 // Metadata
 export const metadata = {
   title: "Create Next App",
@@ -26,7 +32,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${helveticaNow.variable} antialiased`}
+        className={`${poppins.variable} ${helveticaNow.variable} ${TTChocolates.variable} font-tt-chocolates antialiased`}
       >
         {children}
       </body>

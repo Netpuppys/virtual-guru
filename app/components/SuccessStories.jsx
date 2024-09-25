@@ -1,108 +1,73 @@
-import Image from "next/image"
-import bonusPlaceholder from "../../public/delete/bonus.png"
-import Timer from "./ui/Timer"
+import carouselImage from "../../public/delete/carousel.png"
+import Carousel from "./ui/Carousel"
 
 const cards = [
     {
-        image: bonusPlaceholder,
-        title: "Access to the Career Tribe Community",
-        para1: "Join a thriving network of like-minded professionals.",
-        orange: "The Career Tribe",
-        para2: "community is your support system, where you'll get accountability, motivation, and networking opportunities to help you grow."
+        para: <>Learn how to identify your <span className="text-black font-semibold">behavioural strengths</span> and use them to effectively influence your <span className="text-black font-semibold">bosses</span> and <span className="text-black font-semibold">stakeholders</span> use them to effectively influence your <span className="text-black font-semibold">bosses</span> and <span className="text-black font-semibold">stakeholders</span></>
     },
     {
-        image: bonusPlaceholder,
-        title: "15-Minutes a Day Commitment",
-        para1: "This program is designed to fit into your busy life. Simply invest",
-        orange: "15 minutes a day for 8 weeks",
-        para2: ", and watch your career transform before your eyes."
+        para: <>Learn how to identify your <span className="text-black font-semibold">behavioural strengths</span> and use them to effectively influence your <span className="text-black font-semibold">bosses</span> and <span className="text-black font-semibold">stakeholders</span> use them to effectively influence your <span className="text-black font-semibold">bosses</span> and <span className="text-black font-semibold">stakeholders</span></>
     },
     {
-        image: bonusPlaceholder,
-        title: "Exclusive 2-Day Live Masterclass with Coach Teja Gudluru",
-        para1: "Gain access to an exclusive, live 2-day masterclass with",
-        orange: "Coach Teja Gudluru",
-        para2: ", where you'll deep-dive into advanced career growth strategies and get personal insights from an industry expert."
+        para: <>Learn how to identify your <span className="text-black font-semibold">behavioural strengths</span> and use them to effectively influence your <span className="text-black font-semibold">bosses</span> and <span className="text-black font-semibold">stakeholders</span> use them to effectively influence your <span className="text-black font-semibold">bosses</span> and <span className="text-black font-semibold">stakeholders</span></>
     },
-    {
-        image: bonusPlaceholder,
-        title: "Access to exclusive jobs from our partners and Community",
-        para1: "We have partnered with one of the best recruitment and staffing companies -",
-        orange: "Creator Technologies",
-        para2: "that have over 100 clients world-wide. Get exclusives job offers from them and our community members!"
-    }
 ]
+
+const carousel = [ carouselImage, carouselImage, carouselImage, carouselImage, carouselImage ]
 
 const SuccessStories = () => {
   return (
-    <div className="w-full bg-navy-blue">
-        <div className="w-full bg-white rounded-[3rem] pt-16 pb-24 flex flex-col items-center justify-start">
-            <div className="flex items-center justify-center gap-8">
-                <div className="h-[1px] rounded-full w-20 bg-theme-orange font-helveticaNow"></div>
-                <p className="text-[2.5rem] text-navy-blue font-bold">
-                    TOP CLIENTS I WORK WITH
-                </p>
-                <div className="h-[1px] rounded-full w-20 bg-theme-orange"></div>
+    <div className="bg-navy-blue w-full">
+        <div className="bg-white rounded-[3rem] w-full pt-[3.5rem] pb-[5.7rem] flex flex-col items-center justify-start">
+            <p className="text-center text-navy-blue text-[2.3rem] font-extrabold tracking-widest font-helveticaNow ">
+                More than <Orange>30,000 Professionals</Orange> benefitted in over <Orange>45 countries</Orange>
+            </p>
+            <div className="w-[34rem] h-[1px] bg-theme-orange rounded-full mt-6 mb-32"></div>
+            <div className="w-full h-[35rem]">
+                <Carousel images={carousel} />
             </div>
-            <div className="bg-navy-blue w-full max-w-[82rem] rounded-[3.2rem] h-56 mt-8 mb-20 flex flex-wrap items-center justify-center py-4">
-                {[1,1,1,1,1,1,1,1].map((_, index) => (
-                    <div key={index} className="flex items-center justify-center h-20 w-1/4">
-                        <p className="text-3xl uppercase font-bold text-white">
-                            facebook
+        </div>
+        <div className="w-full pt-[2.8rem] pb-[6rem] flex flex-col items-center justify-start">
+            <div className="flex items-center justify-center gap-10">
+                <div className="w-20 h-[1px] bg-theme-orange"></div>
+                <p className="uppercase text-[2.5rem] text-theme-orange font-bold font-helveticaNow text-center">
+                    Unmatched success stories
+                </p>
+                <div className="w-20 h-[1px] bg-theme-orange"></div>
+            </div>
+            <p className="text-[2.5rem] text-white font-medium font-helveticaNow text-center">
+                Some examples from our Hall of Fame participants
+            </p>
+
+            <div className="w-full mb-20 mt-16 flex items-center justify-between gap-[1.75rem] px-12">
+                {[1,1,1,1].map((_, index) => (
+                    <div key={index} className="w-1/5 aspect-square bg-black rounded-3xl"></div>
+                ))}
+            </div>
+            
+            <p className="text-theme-orange text-[2.5rem] text-center font-helveticaNow font-medium">
+                And some more .....
+            </p>
+
+            <div className="w-full flex items-center justify-center gap-8 mt-[7.5rem]">
+                {cards.map((item, index) => (
+                    <div key={index} className="w-[30rem] h-[18rem] relative bg-white pt-[5.3rem] text-center px-[1.6rem] pb-4 rounded-3xl">
+                        <div className="absolute top-0 z-10 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[6.5rem] aspect-square rounded-full border border-white bg-navy-blue"></div>
+                        <p className="text-[1.5rem] text-navy-blue text-wrap">
+                            {item.para}
                         </p>
                     </div>
                 ))}
             </div>
-            <div className="relative mb-[3.5rem] w-full max-w-[92rem] px-20 py-16 flex flex-wrap gap-x-12 gap-y-10 border-2 border-navy-blue rounded-3xl">
-                {/* absolute title */}
-                <div className="px-14 h-16 shadow-xl rounded-xl flex items-center justify-center bg-theme-orange z-10 absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <p className="text-white font-helveticaNow font-bold text-[2.1rem] text-nowrap">
-                        Exclusive Bonus
-                    </p>
-                </div>
-                {/* main cards */}
-                {cards.map((item, index) => (
-                    <div key={index} className="rounded-[2.2rem] group relative overflow-hidden border border-black w-[calc(50%-1.5rem)] h-60">
-                        <Image
-                            src={item.image}
-                            className="w-full h-full object-cover"
-                            alt={item.title}
-                        />
-                        <div className="absolute z-10 h-full pt-4 bg-black bg-opacity-40 opacity-50 group-hover:animate-slide-in group-hover:opacity-100 -bottom-full group-hover:bottom-0 w-full pb-5 left-0 px-5 flex flex-col items-center justify-center">
-                            <div className="w-full flex items-center gap-3">
-                                <p className="aspect-square rounded-xl bg-theme-orange w-10 h-10 flex items-center justify-center mt-2">
-                                    {/* <GiCheckMark /> */}
-                                </p>
-                                <p className="text-white font-helveticaNow text-2xl font-bold">
-                                    {item.title}
-                                </p>
-                            </div>
-                            <p className="text-[#DCDCDC] text-lg pl-[3.25rem] pt-1 text-wrap">
-                                {item.para1}{" "}
-                                <span className="text-theme-orange">
-                                    {item.orange}
-                                </span>{" "}
-                                {item.para2}
-                            </p>
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            <p className="text-[2.3rem] uppercase font-black font-helveticaNow text-navy-blue tracking-wider">
-                IF  YOU SIGN UP <span className="text-theme-orange">TODAY</span>
-            </p>
-
-                <Timer />
-
-            <button
-                className="bg-theme-orange cursor-pointer hover:animate-color-fade hover:text-theme-orange hover:bg-white mt-10 shadow-lg w-[27rem] h-16 font-helveticaNow font-black text-white text-[1.5rem] tracking-widest rounded-full flex items-center justify-center"
-            >
-                ENROLL NOW
-            </button>
         </div>
     </div>
   )
+}
+
+const Orange = ({ children }) => {
+    return (<span className="text-theme-orange">
+        {children}
+    </span>)
 }
 
 export default SuccessStories

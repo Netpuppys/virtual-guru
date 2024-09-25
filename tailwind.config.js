@@ -13,9 +13,13 @@ module.exports = {
         "theme-orange": "#FF914D",
         "navy-blue": "#323A53",
       },
+      boxShadow: {
+        "orange-glow": "0px 4.613px 12.225px 0px rgba(232, 80, 24, 0.30);"
+      },
       fontFamily: {
         poppins: ['var(--font-poppins)', 'sans-serif'], // Add Poppins here
         helveticaNow: ['var(--font-helvetica-now-display)', 'sans-serif'], // Also for the local font
+        "tt-chocolates": ['var(--font-tt-chocolates)', 'sans-serif'],
       },
       keyframes: {
         // Define keyframes for the animation

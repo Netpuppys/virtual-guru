@@ -1,6 +1,8 @@
 import AboutCoach from "./components/AboutCoach";
+import EnrolmentSection from "./components/EnrolmentSection";
 import Hero from "./components/Hero";
 import SuccessStories from "./components/SuccessStories";
+import TopClients from "./components/TopClients";
 import VideoSection from "./components/VideoSection";
 import WhatYouGet from "./components/WhatYouGet";
 
@@ -12,7 +14,9 @@ export default function Home() {
       <VideoSection />
       <WhatYouGet />
       <SuccessStories />
+      <TopClients />
       <AboutCoach />
+      <EnrolmentSection />
     </div>
   );
 }

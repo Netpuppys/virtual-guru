@@ -19,3 +19,17 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+  background-color: gray;
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  width: 1rem;
+  height: 1rem;
+  background-color: black;
+  opacity: 1;
+}

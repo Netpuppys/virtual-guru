@@ -33,7 +33,7 @@ const AboutCoach = () => {
             ))}
         </div>
         <button
-            className="font-helveticaNow cursor-pointer hover:animate-color-fade hover:text-theme-orange hover:bg-white mt-[3.75rem] text-navy-blue text-[1.5rem] font-bold tracking-widest bg-theme-orange px-20 h-16 flex items-center justify-center rounded-full "
+            className="font-helveticaNow shadow-orange-glow cursor-pointer hover:animate-color-fade hover:text-theme-orange hover:bg-white mt-[3.75rem] text-navy-blue text-[1.5rem] font-bold tracking-widest bg-theme-orange px-20 h-16 flex items-center justify-center rounded-full "
         >
             {"Enroll Now for INR 2999 + GST (Original price INR 14,999)"}
         </button>

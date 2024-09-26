@@ -48,17 +48,17 @@ const EnrolmentSection = () => {
             <div className="w-[21rem] mt-[2.3rem] mb-[1.75rem] h-[1.5px] bg-theme-orange"></div>
 
             <div className="w-full max-w-[80rem] border-[2.5px] border-navy-blue rounded-3xl overflow-hidden pb-10">
-                <div className="rounded-3xl mb-8 w-full bg-navy-blue flex items-center justify-center h-fit px-12 lg:px-0 py-6 lg:py-0 lg:h-[7.3rem]">
+                <div className="rounded-2xl mb-8 w-full bg-navy-blue flex items-center justify-center h-fit px-12 lg:px-0 py-6 lg:py-0 lg:h-[7.3rem]">
                     <p className="italic text-[2.2rem] text-wrap lg:text-[3.7rem] font-bold font-helveticaNow text-white text-center">
                         Ready to <span className="text-theme-orange">Accelerate</span> Your Career?
                     </p>
                 </div>
 
                 <p className="text-center text-navy-blue text-[1.375rem] lg:text-[1.6rem] font-medium mx-8 lg:mx-32">
-                    In just <Orange>15 minutes a day</Orange>, over <Orange>8 weeks</Orange>, you can transform your career trajectory. This is more than just a course—it's a personalized, guided journey to <Orange>career success</Orange>. 
+                    In just <Orange>15 minutes a day</Orange>, over <Orange>8 weeks</Orange>, you can transform your career trajectory. This is more than just a course—it&apos;s a personalized, guided journey to <Orange>career success</Orange>. 
                     <br/>
                     <br/>
-                    <Orange>Don't wait</Orange>—take the first step towards unlocking your potential and achieving the <Orange>career of your dreams</Orange>.
+                    <Orange>Don&apos;t wait</Orange>—take the first step towards unlocking your potential and achieving the <Orange>career of your dreams</Orange>.
                 </p>
             </div>
 

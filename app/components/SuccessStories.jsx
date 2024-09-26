@@ -39,7 +39,7 @@ const SuccessStories = () => {
                 Some examples from our Hall of Fame participants
             </p>
 
-            <div className="w-full h-fit overflow-x-auto">
+            <div className="w-full h-fit overflow-x-auto no-scrollbar">
                 <div className="w-full min-w-[80rem] mb-20 mt-16 flex items-center justify-start lg:justify-between gap-[1.75rem] px-12">
                     {[1,1,1,1].map((_, index) => (
                         <div key={index} className="w-1/4 aspect-square bg-black rounded-3xl"></div>
@@ -51,7 +51,7 @@ const SuccessStories = () => {
                 And some more .....
             </p>
 
-            <div className="mt-[4rem] w-full overflow-x-auto overflow-y-visible">
+            <div className="mt-[4rem] w-full overflow-x-auto overflow-y-visible no-scrollbar">
                 <div className="w-fit lg:w-full flex items-center px-10 lg:px-0 justify-center gap-8">
                     {cards.map((item, index) => (
                         <div key={index} className="w-[80vw] lg:w-[30rem] lg:h-[18rem] relative bg-white pt-[5.3rem] text-center px-[1.6rem] pb-4 rounded-3xl mt-[3.5rem]">

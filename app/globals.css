@@ -33,3 +33,13 @@ body {
   background-color: black;
   opacity: 1;
 }
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* Internet Explorer and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Hide scrollbar for Webkit-based browsers like Chrome, Safari, and newer versions of Edge */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}

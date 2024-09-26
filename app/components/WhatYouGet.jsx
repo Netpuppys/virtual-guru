@@ -59,7 +59,7 @@ const points = [
 const WhatYouGet = () => {
   return (
     <div className="w-full bg-navy-blue">
-        <div className="w-full rounded-[3rem] px-10 lg:px-16 pb-20 bg-white flex flex-col items-center pt-16">
+        <div className="w-full rounded-[3rem] px-6 lg:px-16 pb-20 bg-white flex flex-col items-center pt-16">
             <p className="tracking-wide text-navy-blue text-5xl text-center lg:text-left font-black mb-6 leading-snug md:leading-none">
                 What You Get with{" "}
                 <span className="text-theme-orange font-black">
@@ -82,11 +82,11 @@ const WhatYouGet = () => {
                                 <p className="aspect-square bg-white rounded-full w-6 h-6 flex items-center justify-center mt-2">
                                     <GiCheckMark />
                                 </p>
-                                <p className="text-white font-helveticaNow text-[1.2rem] lg:text-2xl font-bold">
+                                <p className="text-white font-helveticaNow text-[1rem] lg:text-2xl font-bold">
                                     {item.title}
                                 </p>
                             </div>
-                            <p className="text-white text-[1rem] lg:text-lg leading-snug pl-[2.25rem] pt-2 text-wrap">
+                            <p className="text-white text-[0.9rem] lg:text-lg leading-snug pl-[2.25rem] pt-2 text-wrap">
                                 {item.para}
                             </p>
                         </div>
@@ -95,7 +95,7 @@ const WhatYouGet = () => {
             </div>
         </div>
 
-        <div className="pt-16 lg:pt-32 pb-20 flex flex-col items-center justify-start px-[1.75rem] lg:px-0">
+        <div className="pt-16 lg:pt-32 pb-20 flex flex-col items-center justify-start px-[1.5rem] lg:px-0">
             <p className="text-4xl text-center lg:text-left font-extrabold font-helveticaNow text-white tracking-widest leading-normal lg:leading-none">
                 Why Choose{" "}
                 <span className="text-theme-orange block lg:inline">
@@ -108,7 +108,7 @@ const WhatYouGet = () => {
                 {subTitle2}
             </p>
 
-            <div className="w-full flex flex-col gap-7 px-10 max-w-[87rem] mt-12">
+            <div className="w-full flex flex-col gap-7 max-w-[87rem] mt-12">
                 {points.map((item, index) => (
                     <div key={index} className="px-[0.8rem] lg:px-12 py-7 flex items-start gap-4 lg:gap-8 rounded-xl border border-white">
                         <p className="h-5 lg:h-8 aspect-square text-sm lg:text-xl flex items-center justify-center bg-white rounded-full">

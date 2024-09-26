@@ -35,9 +35,9 @@ const AboutCoach = () => {
             ))}
         </div>
         <button
-            className="font-helveticaNow shadow-orange-glow cursor-pointer hover:animate-color-fade hover:text-theme-orange hover:bg-white mt-[3.75rem] text-navy-blue text-[0.75rem] text-nowrap lg:text-[1.5rem] font-bold tracking-widest bg-theme-orange px-6 lg:px-20 h-10 lg:h-16 flex items-center justify-center rounded-full "
+            className="font-helveticaNow lg:flex-row lg:max-w-none lg:w-fit shadow-orange-glow cursor-pointer w-full max-w-[30rem] active:bg-white lg:hover:animate-color-fade lg:hover:text-theme-orange lg:hover:bg-white mt-[3.75rem] text-navy-blue text-[0.9rem] text-nowrap lg:text-[1.5rem] font-bold tracking-widest bg-theme-orange px-10 lg:px-20 h-20 lg:h-16 flex flex-col items-center justify-center rounded-2xl lg:rounded-full "
         >
-            {"Enroll Now for INR 2999 + GST (Original price INR 14,999)"}
+            Enroll Now for INR 2999 + GST<span className="ml-1 lg:ml-0 block lg:inline">{`(Original price INR 14,999)`}</span>
         </button>
 
         <div className="mt-[9.5rem] flex items-center justify-center gap-1">
@@ -85,7 +85,7 @@ const AboutCoach = () => {
             </p>
         </div>
 
-        <div className="px-4 text-nowrap lg:px-20 mt-[3.75rem] bg-white text-theme-orange rounded-full font-bold text-[0.75rem] lg:text-[1.5rem] font-helveticaNow tracking-widest py-2">
+        <div className="px-4 text-center lg:px-20 max-w-[20rem] text-wrap lg:max-w-none mt-[3.75rem] bg-white text-theme-orange rounded-full font-bold text-[0.75rem] lg:text-[1.5rem] font-helveticaNow tracking-widest py-2">
             We are the most awarded Career Growth Program in India!
         </div>
 

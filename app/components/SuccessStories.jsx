@@ -56,7 +56,7 @@ const SuccessStories = () => {
                     {cards.map((item, index) => (
                         <div key={index} className="w-[80vw] lg:w-[30rem] lg:h-[18rem] relative bg-white pt-[5.3rem] text-center px-[1.6rem] pb-4 rounded-3xl mt-[3.5rem]">
                             <div className="absolute top-0 z-10 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[6.5rem] aspect-square rounded-full border border-white bg-navy-blue"></div>
-                            <p className="text-[1.5rem] text-navy-blue text-wrap">
+                            <p className="text-[1rem] lg:text-[1.5rem] text-navy-blue text-wrap">
                                 {item.para}
                             </p>
                         </div>

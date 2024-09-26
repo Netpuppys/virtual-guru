@@ -8,6 +8,7 @@ import WhatYouGet from "./components/WhatYouGet";
 
 
 export default function Home() {
+
   return (
     <div className="w-screen min-h-screen overflow-x-hidden">
       <Hero />

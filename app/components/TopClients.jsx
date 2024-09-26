@@ -63,22 +63,22 @@ const TopClients = () => {
                     </div>
                     {/* main cards */}
                     {cards.map((item, index) => (
-                        <div key={index} className="rounded-[2.2rem] group relative overflow-hidden border border-black w-full lg:w-[calc(50%-1.5rem)] h-52 lg:h-60">
+                        <div key={index} className="rounded-[2.2rem] group relative overflow-hidden border border-black w-full aspect-square lg:aspect-auto lg:w-[calc(50%-1.5rem)] lg:h-60">
                             <Image
                                 src={item.image}
                                 className="w-full h-full object-cover"
                                 alt={item.title}
                             />
-                            <div className="absolute z-10 h-full pt-4 bg-black bg-opacity-40 lg:opacity-50 lg:group-hover:animate-slide-in lg:group-hover:opacity-100 bottom-0 lg:-bottom-full group-hover:bottom-0 w-full pb-5 left-0 px-5 flex flex-col items-center lg:justify-center">
-                                <div className="w-full flex items-center gap-3">
-                                    <p className="aspect-square rounded-xl bg-theme-orange w-10 h-10 flex items-center justify-center mt-2">
+                            <div className="absolute z-10 h-full pt-4 bg-black bg-opacity-40 lg:opacity-50 lg:group-hover:animate-slide-in lg:group-hover:opacity-100 bottom-0 lg:-bottom-full group-hover:bottom-0 w-full pb-5 left-0 px-3 lg:px-5 flex flex-col items-center justify-center">
+                                <div className="w-full flex items-start lg:items-center gap-3">
+                                    <p className="aspect-square rounded-lg lg:rounded-xl flex bg-theme-orange w-8 min-w-8 lg:w-10 lg:h-10 items-center justify-center mt-2">
                                         {/* <GiCheckMark /> */}
                                     </p>
-                                    <p className="text-white font-helveticaNow text-[1rem] lg:text-2xl font-bold">
+                                    <p className="text-white font-helveticaNow text-wrap text-[1rem] lg:text-2xl font-bold">
                                         {item.title}
                                     </p>
                                 </div>
-                                <p className="text-[#DCDCDC] text-sm lg:text-lg pl-[3.25rem] pt-1 text-wrap">
+                                <p className="text-[#DCDCDC] text-sm lg:text-lg pl-[2.6rem] lg:pl-[3.25rem] pt-1 text-wrap">
                                     {item.para1}{" "}
                                     <span className="text-theme-orange">
                                         {item.orange}

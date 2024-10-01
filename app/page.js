@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect } from "react";
 import AboutCoach from "./components/AboutCoach";
 import EnrolmentSection from "./components/EnrolmentSection";

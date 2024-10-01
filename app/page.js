@@ -10,8 +10,12 @@ import WhatYouGet from "./components/WhatYouGet";
 import mrTeja from "../public/hero/mrTeja.png";
 
 export default function Home() {
+
   useEffect(() => {
     // Ensure Razorpay SDK is loaded
+    const razorpayKeyId = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID;
+    console.log(razorpayKeyId)
+
     const script = document.createElement("script");
     script.src = "https://checkout.razorpay.com/v1/checkout.js";
     script.async = true;
@@ -24,7 +28,12 @@ export default function Home() {
 
   const handlePayment = () => {
     // You can retrieve these values from Razorpay Dashboard -> API Keys
-    const razorpayKeyId = "rzp_live_DaMpFsfqeVOE3i";
+    const razorpayKeyId = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID;
+
+    if (!razorpayKeyId) {
+      alert("something went wrong")
+      return
+    }
 
     const options = {
       key: razorpayKeyId, // Enter the Key ID generated from Razorpay Dashboard

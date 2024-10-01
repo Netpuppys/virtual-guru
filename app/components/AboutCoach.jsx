@@ -1,5 +1,4 @@
 import React from "react";
-
 import mrTeja from "../../public/hero/mrTeja.png";
 import Image from "next/image";
 import { RiDoubleQuotesR, RiDoubleQuotesL } from "react-icons/ri";

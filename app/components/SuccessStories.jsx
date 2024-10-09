@@ -77,7 +77,7 @@ const SuccessStories = () => {
                 <div className="absolute top-0 z-10 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[6.5rem] aspect-square rounded-full border border-white bg-navy-blue"></div>
                 <div className="w-full h-full overflow-y-auto no-scrollbar">
                   <p className="text-[1rem] lg:text-[1.2rem]  text-navy-blue text-pretty ">
-                    "{item.para}"
+                    &quot;{item.para}&quot;
                   </p>
                   <p className="mt-4 font-semibold text-navy-blue">
                     {item.author}

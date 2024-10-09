@@ -1,57 +1,30 @@
-import carouselImage from "../../public/delete/carousel.png";
 import Carousel from "./ui/Carousel";
 
 const cards = [
   {
-    para: (
-      <>
-        Learn how to identify your{" "}
-        <span className="text-black font-semibold">behavioural strengths</span>{" "}
-        and use them to effectively influence your{" "}
-        <span className="text-black font-semibold">bosses</span> and{" "}
-        <span className="text-black font-semibold">stakeholders</span> use them
-        to effectively influence your{" "}
-        <span className="text-black font-semibold">bosses</span> and{" "}
-        <span className="text-black font-semibold">stakeholders</span>
-      </>
-    ),
+    para: "I loved the personalized approach of this program! The Niche Clarity module helped me pivot into a career that truly aligns with my strengths. Teja's insights are practical and on-point.",
+    author: "Shalini D., Business Analyst"
   },
   {
-    para: (
-      <>
-        Learn how to identify your{" "}
-        <span className="text-black font-semibold">behavioural strengths</span>{" "}
-        and use them to effectively influence your{" "}
-        <span className="text-black font-semibold">bosses</span> and{" "}
-        <span className="text-black font-semibold">stakeholders</span> use them
-        to effectively influence your{" "}
-        <span className="text-black font-semibold">bosses</span> and{" "}
-        <span className="text-black font-semibold">stakeholders</span>
-      </>
-    ),
+    para: "I joined the CGP ACT program unsure of my next steps. Now, I've not only found my career niche, but the RAMP framework and weekly job opportunities from recruitment partners have fast-tracked my progress!",
+    author: "Anil P., HR Professional"
   },
   {
-    para: (
-      <>
-        Learn how to identify your{" "}
-        <span className="text-black font-semibold">behavioural strengths</span>{" "}
-        and use them to effectively influence your{" "}
-        <span className="text-black font-semibold">bosses</span> and{" "}
-        <span className="text-black font-semibold">stakeholders</span> use them
-        to effectively influence your{" "}
-        <span className="text-black font-semibold">bosses</span> and{" "}
-        <span className="text-black font-semibold">stakeholders</span>
-      </>
-    ),
+    para: "The CGP ACT program helped me unlock my true potential! The RAMP framework gave me clarity on my strengths, and I've never felt more confident in my career choices. The weekly calls with Teja are a game-changer!",
+    author: "Ravi K., Marketing Specialist"
   },
-];
-
-const carousel = [
-  carouselImage,
-  carouselImage,
-  carouselImage,
-  carouselImage,
-  carouselImage,
+  {
+    para: "The psychometric assessment was spot-on in helping me identify my key strengths. The AI-based resume module and LinkedIn mastery made a huge difference in how I present myself. I'm already getting more job offers!",
+    author: "Priya S., IT Consultant"
+  },
+  {
+    para: "The CGP Tribe is an amazing support system. The live coaching calls with Teja keep me on track, and the community keeps me motivated. I’ve seen real growth in just weeks, especially after applying the Interview and Job Search strategies.",
+    author: "Amit T., Operations Manager"
+  },
+  {
+    para: "As a fresher, I was overwhelmed about where to start in my career. The CGP ACT program gave me direction with the Niche Purpose and Clarity module, and the RAMP assessment showed me my strengths. The ATS-friendly resume and LinkedIn mastery helped me land my first job! The weekly calls with Teja and the CGP Tribe support have been invaluable.",
+    author: "Neha M., Recent Graduate"
+  },
 ];
 
 const SuccessStories = () => {
@@ -64,7 +37,7 @@ const SuccessStories = () => {
         </p>
         <div className="w-[34rem] h-[1px] hidden lg:block bg-theme-orange rounded-full mt-6 mb-32"></div>
         <div className="w-full mt-10 lg:mt-0">
-          <Carousel images={carousel} />
+          <Carousel />
         </div>
       </div>
       <div className="w-full pt-[2.8rem] pb-[6rem] flex flex-col items-center justify-start">
@@ -94,17 +67,22 @@ const SuccessStories = () => {
           And some more .....
         </p>
 
-        <div className="mt-[4rem] w-full overflow-x-auto overflow-y-visible no-scrollbar">
-          <div className="w-fit lg:w-full flex items-center px-10 lg:px-0 justify-center gap-8">
+        <div className="mt-[4rem] w-full overflow-x-auto overflow-y-visible no-scrollbar lg:px-20">
+          <div className="w-fit lg:w-full flex items-center px-10 lg:px-0 justify-start gap-8">
             {cards.map((item, index) => (
               <div
                 key={index}
-                className="w-[80vw] lg:w-[30rem] lg:h-[18rem] relative bg-white pt-[5.3rem] text-center px-[1.6rem] pb-4 rounded-3xl mt-[3.5rem]"
+                className="w-[80vw] lg:min-w-[25rem] lg:w-[30rem] lg:h-[18rem] relative bg-white pt-[3.5rem] text-center px-4 pb-4 rounded-3xl mt-[3.5rem]"
               >
                 <div className="absolute top-0 z-10 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[6.5rem] aspect-square rounded-full border border-white bg-navy-blue"></div>
-                <p className="text-[1rem] lg:text-[1.5rem] text-navy-blue text-wrap">
-                  {item.para}
-                </p>
+                <div className="w-full h-full overflow-y-auto no-scrollbar">
+                  <p className="text-[1rem] lg:text-[1.2rem]  text-navy-blue text-pretty ">
+                    "{item.para}"
+                  </p>
+                  <p className="mt-4 font-semibold text-navy-blue">
+                    {item.author}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

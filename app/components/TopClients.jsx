@@ -1,10 +1,13 @@
 import Image from "next/image";
-import bonusPlaceholder from "../../public/delete/bonus.png";
+import bonus1 from "../../public/bonus/bonus1.png"
+import bonus2 from "../../public/bonus/bonus2.png"
+import bonus3 from "../../public/bonus/bonus3.png"
+import bonus4 from "../../public/bonus/bonus4.png"
 import Timer from "./ui/Timer";
 
 const cards = [
   {
-    image: bonusPlaceholder,
+    image: bonus1,
     title: "Access to the Career Tribe Community",
     para1: "Join a thriving network of like-minded professionals.",
     orange: "The Career Tribe",
@@ -12,14 +15,14 @@ const cards = [
       "community is your support system, where you'll get accountability, motivation, and networking opportunities to help you grow.",
   },
   {
-    image: bonusPlaceholder,
+    image: bonus2,
     title: "15-Minutes a Day Commitment",
     para1: "This program is designed to fit into your busy life. Simply invest",
     orange: "15 minutes a day for 8 weeks",
     para2: ", and watch your career transform before your eyes.",
   },
   {
-    image: bonusPlaceholder,
+    image: bonus3,
     title: "Exclusive 2-Day Live Masterclass with Coach Teja Gudluru",
     para1: "Gain access to an exclusive, live 2-day masterclass with",
     orange: "Coach Teja Gudluru",
@@ -27,7 +30,7 @@ const cards = [
       ", where you'll deep-dive into advanced career growth strategies and get personal insights from an industry expert.",
   },
   {
-    image: bonusPlaceholder,
+    image: bonus4,
     title: "Access to exclusive jobs from our partners and Community",
     para1:
       "We have partnered with one of the best recruitment and staffing companies -",
@@ -40,7 +43,7 @@ const cards = [
 const TopClients = ({ handlePayment }) => {
   return (
     <div className="w-full bg-navy-blue">
-      <div className="w-full bg-white rounded-[3rem] pt-16 pb-24 flex flex-col items-center justify-start">
+      <div className="w-full bg-white rounded-[3rem] pt-16 pb-24 flex flex-col items-center justify-start lg:px-20">
         <div className="flex items-center justify-center gap-8">
           <div className="h-[1px] hidden lg:block rounded-full w-20 bg-theme-orange font-helveticaNow"></div>
           <p className="text-[1.55rem] lg:text-[2.5rem] text-center lg:text-left text-navy-blue font-bold">
@@ -79,7 +82,7 @@ const TopClients = ({ handlePayment }) => {
                   className="w-full h-full object-cover"
                   alt={item.title}
                 />
-                <div className="absolute z-10 h-full pt-4 bg-black bg-opacity-40 lg:opacity-50 lg:group-hover:animate-slide-in lg:group-hover:opacity-100 bottom-0 lg:-bottom-full group-hover:bottom-0 w-full pb-5 left-0 px-3 lg:px-5 flex flex-col items-center justify-center">
+                <div className="absolute z-10 h-full pt-4 bg-black bg-opacity-70 bottom-0 w-full pb-5 left-0 px-3 lg:px-5 flex flex-col items-center justify-center">
                   <div className="w-full flex items-start lg:items-center gap-3">
                     <p className="aspect-square rounded-lg lg:rounded-xl flex bg-theme-orange w-8 min-w-8 lg:w-10 lg:h-10 items-center justify-center mt-2">
                       {/* <GiCheckMark /> */}

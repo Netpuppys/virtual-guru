@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-const date = "2024-09-27T12:00:00"
+const date = "2024-11-27T12:00:00"
 
 const Timer = () => {
   const targetDateKey = 'targetDate';

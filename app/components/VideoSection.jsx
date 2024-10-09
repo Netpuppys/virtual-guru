@@ -1,4 +1,6 @@
 import { GiCheckMark } from "react-icons/gi";
+// import longVideo from "../../public/video/longVideo.mp4";
+// import FileLoader from "fileloader";
 
 const points = [
   "Do you think you have weak communication skills?",
@@ -12,7 +14,28 @@ const points = [
 const VideoSection = () => {
   return (
     <div className="w-full bg-navy-blue pt-10 px-6 lg:pt-40 pb-24 lg:pb-44 flex items-center lg:px-32 justify-center flex-col">
-      <div className="aspect-video w-[90%] mb-10 lg:mb-20 rounded-3xl shadow-sm bg-black"></div>
+      <div className="aspect-video w-[90%] overflow-hidden mb-10 lg:mb-20 rounded-3xl shadow-sm bg-black">
+      {/* <video
+          src={longVideo}
+          className="w-full h-full rounded-3xl"
+          autoPlay
+          loop
+          muted
+          playsInline
+          controls
+        >
+          Your browser does not support the video tag.
+        </video> */}
+        {/* <iframe 
+          title="vimeo-player" 
+          src="https://player.vimeo.com/video/1017897803?h=532ba321f6" 
+          // width="640" 
+          // height="360" 
+          frameborder="0"
+          className="w-full h-full"
+          >
+          </iframe> */}
+      </div>
 
       <p className="text-[1.6rem] lg:text-[2.5rem] text-white font-extrabold leading-relaxed tracking-[0.10125rem]">
         Whatever you think is your weakness doesn&apos;t matter! Everyone can

@@ -11,7 +11,23 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 import { useRef, useState, useEffect } from 'react';
 
-const Carousel = ({ images }) => {
+import galleryImage1 from "../../../public/gallery/galleryImage1.jpg"
+import galleryImage2 from "../../../public/gallery/galleryImage2.jpg"
+import galleryImage3 from "../../../public/gallery/galleryImage3.jpg"
+import galleryImage4 from "../../../public/gallery/galleryImage4.jpg"
+import galleryImage5 from "../../../public/gallery/galleryImage5.jpg"
+import galleryImage6 from "../../../public/gallery/galleryImage6.jpg"
+
+const images = [
+  galleryImage1,
+  galleryImage2,
+  galleryImage3,
+  galleryImage4,
+  galleryImage5,
+  galleryImage6
+]
+
+const Carousel = () => {
     const imageRef = useRef(null)
     const [ imageHeight, setImageHeight ] = useState(0);
 

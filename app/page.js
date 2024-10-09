@@ -9,6 +9,7 @@ import TopClients from "./components/TopClients";
 import VideoSection from "./components/VideoSection";
 import WhatYouGet from "./components/WhatYouGet";
 import mrTeja from "../public/hero/mrTeja.png";
+import ReportSection from "./components/ReportSection";
 
 export default function Home() {
 
@@ -63,9 +64,10 @@ export default function Home() {
   };
 
   return (
-    <div className="w-screen min-h-screen overflow-x-hidden">
+    <div className="w-full min-h-screen overflow-x-hidden">
       <Hero handlePayment={handlePayment} />
       <VideoSection />
+      <ReportSection />
       <WhatYouGet />
       <SuccessStories />
       <TopClients handlePayment={handlePayment} />

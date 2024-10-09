@@ -1,7 +1,28 @@
 import React from "react";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
 import mrTeja from "../../public/hero/mrTeja.png";
 import Image from "next/image";
 import { RiDoubleQuotesR, RiDoubleQuotesL } from "react-icons/ri";
+import award1 from "../../public/awards/award1.jpg"
+import award2 from "../../public/awards/award2.jpg"
+import award3 from "../../public/awards/award3.png"
+import award4 from "../../public/awards/award4.jpg"
+
+import businessImage from "../../public/featured/business.png"
+import entrepreneurImage from "../../public/featured/entrepreneur.png"
+import forbesImage from "../../public/featured/forbes.png"
+import indianExpressIcon from "../../public/featured/indianExpress.png"
+import tedxIcon from "../../public/featured/tedx.png"
+import yourStory from "../../public/featured/yourStory.png"
 
 const points = [
   "A recent graduate looking to start your career with confidence",
@@ -9,6 +30,22 @@ const points = [
   "Or an experienced professional seeking new direction and clarity",
   "You have a career gap and you want to find your dream job that pays 2X Salary",
 ];
+
+const awards = [
+  award1,
+  award2,
+  award3,
+  award4
+]
+
+const logos = [
+  businessImage,
+  entrepreneurImage,
+  forbesImage,
+  indianExpressIcon,
+  tedxIcon,
+  yourStory
+]
 
 const AboutCoach = ({ handlePayment }) => {
   return (
@@ -81,17 +118,77 @@ const AboutCoach = ({ handlePayment }) => {
           <RiDoubleQuotesR />
         </p>
       </div>
+      
+      <div className=" flex flex-col items-center justify-start gap-12 py-10">
+          <p className="text-[1.7rem] font-extrabold tracking-[0.159rem] font-helveticaNow text-white">
+            As <span className="text-theme-orange">featured</span> In..
+          </p>
+
+          <div className="h-16 hidden lg:flex lg:h-32 max-w-[80vw] lg:max-w-[45rem] overflow-hidden items-center justify-center gap-4 lg:gap-10 rounded-2xl border border-white">
+            <Swiper
+              modules={[Navigation, Autoplay]} // Add your modules
+              spaceBetween={30}
+              slidesPerView={3}
+              centeredSlides={true} // Centers the active slide
+              autoplay={{ delay: 2000 }} // Auto play
+              loop={true}
+              className={`flex  items-center w-full h-full justify-center overflow-visible`}
+            >
+              {logos.map((logo, index) => (
+                <SwiperSlide key={index} className="w-[33%] flex items-center justify-center h-full">
+                  <div className="flex items-center justify-center px-4 lg:px-10 w-full h-full">
+                    <Image
+                      src={logo}
+                      className="w-full h-full object-contain"
+                      alt=""
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+          <div className="h-16 lg:h-32 lg:hidden max-w-[80vw] lg:max-w-[45rem] overflow-hidden flex items-center justify-center gap-4 lg:gap-10 rounded-2xl border border-white">
+            <Swiper
+              modules={[Navigation, Autoplay]} // Add your modules
+              spaceBetween={30}
+              slidesPerView={2}
+              centeredSlides={true} // Centers the active slide
+              autoplay={{ delay: 2000 }} // Auto play
+              loop={true}
+              className={`flex items-center w-full h-full justify-start overflow-visible`}
+            >
+              {logos.map((logo, index) => (
+                <SwiperSlide key={index} className="w-[33%] flex items-center justify-center h-full">
+                  <div className="flex items-center justify-center px-4 lg:px-10 w-full h-full">
+                    <Image
+                      src={logo}
+                      className="w-full h-full object-contain"
+                      alt=""
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+      </div>
 
       <div className="px-4 text-center lg:px-20 max-w-[20rem] text-wrap lg:max-w-none mt-[3.75rem] bg-white text-theme-orange rounded-full font-bold text-[0.75rem] lg:text-[1.5rem] font-helveticaNow tracking-widest py-2">
         We are the most awarded Career Growth Program in India!
       </div>
 
-      <div className="max-w-[90rem] lg:mb-0 mb-40 h-[8rem] lg:h-[16rem] mt-[6.5rem] w-full flex items-center justify-between flex-wrap gap-8 lg:gap-0">
-        {[1, 1, 1, 1].map((_, index) => (
+      <div className="max-w-[90rem] lg:mb-0 mb-40 h-[8rem] lg:h-[16rem] mt-[6.5rem] w-full flex items-center justify-between flex-wrap gap-8 lg:gap-0 lg:px-20">
+        {awards.map((item, index) => (
           <div
             key={index}
-            className="bg-black rounded-[2.3rem] h-full w-[calc(50%-1rem)] lg:w-[22%]"
-          ></div>
+            className="bg-black rounded-[2.3rem] overflow-hidden h-full w-[calc(50%-1rem)] lg:w-[22%]"
+          >
+            <Image
+              src={item}
+              className="w-full z-10 h-full object-cover"
+              alt="teja gudluru awards"
+            />
+          </div>
         ))}
       </div>
     </div>

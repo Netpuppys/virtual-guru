@@ -1,7 +1,14 @@
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
+import icon1 from "../../public/icons/icon1.png"
+import icon2 from "../../public/icons/icon2.png"
+import icon3 from "../../public/icons/icon3.png"
+import icon4 from "../../public/icons/icon4.png"
+import icon5 from "../../public/icons/icon5.png"
+import Image from "next/image";
 
 const sections = [
   {
+    icon: icon1,
     para: (
       <>
         The comprehensive{" "}
@@ -13,6 +20,7 @@ const sections = [
     ),
   },
   {
+    icon: icon2,
     para: (
       <>
         <span className="text-theme-orange">6 world-class career modules</span>{" "}
@@ -21,6 +29,7 @@ const sections = [
     ),
   },
   {
+    icon: icon3,
     para: (
       <>
         Access to the{" "}
@@ -30,6 +39,7 @@ const sections = [
     ),
   },
   {
+    icon: icon4,
     para: (
       <>
         Lifetime access to{" "}
@@ -38,6 +48,7 @@ const sections = [
     ),
   },
   {
+    icon: icon5,
     para: (
       <>
         An exclusive,{" "}
@@ -65,10 +76,16 @@ const EnrolmentSection = ({ handlePayment }) => {
           {sections.map((item, index) => (
             <div
               key={index}
-              className="flex w-[calc(50%-0.5rem)] lg:w-[15rem] flex-col items-center justify-center gap-6"
+              className="flex w-[calc(50%-0.5rem)] lg:max-w-[15rem] lg:w-[calc(20%-1.6rem)] flex-col items-center justify-center gap-6"
             >
-              <div className="w-16 aspect-square rounded-2xl bg-navy-blue"></div>
-              <p className="text-navy-blue font-medium text-center text-[0.85rem] lg:text-xl">
+              <div className="w-16 aspect-square rounded-2xl bg-navy-blue p-3">
+                <Image
+                  src={item.icon}
+                  className=""
+                  alt="course benefits"
+                />
+              </div>
+              <p className="text-navy-blue font-medium text-center text-[0.85rem] text-pretty lg:text-xl">
                 {item.para}
               </p>
             </div>

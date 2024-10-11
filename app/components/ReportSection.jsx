@@ -13,7 +13,7 @@ const reportImages = [
     report4
 ]
 
-const para = <>Here is how the <strong>CGP Act program's</strong> personalized assessment can accelerate your <strong>career:</strong>"</>
+const para = <>Here is how the <strong>CGP Act program&apos;s</strong> personalized assessment can accelerate your <strong>career:</strong></>
 
 const points = [
     {

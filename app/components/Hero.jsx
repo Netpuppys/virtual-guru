@@ -14,7 +14,7 @@ const Hero = ({ handlePayment }) => {
           <p className="text-[1.6rem] lg:max-w-[50rem] lg:text-5xl text-navy-blue font-semibold max-w-[20rem] tracking-wide">
             Unlock Your Customized Career Growth Plan with 2X Salary Growth with{" "}
             <span className="text-theme-orange font-poppins font-extrabold">
-              CGP ACT Program
+              The CGP ACT Program
             </span>
           </p>
           <div className="w-1/2 h-[2px] rounded-full bg-theme-orange my-8"></div>

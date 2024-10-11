@@ -38,11 +38,12 @@ const VideoSection = () => {
       </div>
 
       <p className="text-[1.6rem] lg:text-[2.5rem] text-white font-extrabold leading-relaxed tracking-[0.10125rem]">
-        Whatever you think is your weakness doesn&apos;t matter! Everyone can
-        grow <span className="text-theme-orange">exponentially</span> in their
-        careers and easily get a{" "}
+        Whatever you think is your weakness doesn&apos;t matter! Every one can
+        grow <span className="text-theme-orange">exponentially</span>{" "}
+        in their careers and easily get a{" "}
         <span className="text-theme-orange">2X hike</span> just within{" "}
-        <span className="text-theme-orange">8 weeks!</span>
+        <span className="text-theme-orange">8 weeks!</span> with the{" "}
+        <span className="text-theme-orange">CGP ACT Program!</span>
       </p>
 
       <div className="max-w-[66rem] mt-10 mb-12 w-full py-12 px-6 lg:px-24 rounded-3xl border border-theme-orange flex flex-col items-start justify-start gap-9">

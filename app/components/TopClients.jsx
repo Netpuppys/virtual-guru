@@ -5,9 +5,28 @@ import bonus3 from "../../public/bonus/bonus3.png"
 import bonus4 from "../../public/bonus/bonus4.png"
 import Timer from "./ui/Timer";
 
+import logo1 from "../../public/logos/logo1.png"
+import logo2 from "../../public/logos/logo2.png"
+import logo3 from "../../public/logos/logo3.png"
+import logo4 from "../../public/logos/logo4.png"
+import logo5 from "../../public/logos/logo5.png"
+import logo6 from "../../public/logos/logo6.png"
+import logo7 from "../../public/logos/logo7.png"
+import logo8 from "../../public/logos/logo8.png"
+
+import icon1 from "../../public/logos/icon1.png"
+import icon2 from "../../public/logos/icon2.png"
+import icon3 from "../../public/logos/icon3.png"
+import icon4 from "../../public/logos/icon4.png"
+
+const logoimages = [
+  logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8
+]
+
 const cards = [
   {
-    image: bonus1,
+    image: bonus2,
+    icon: icon1,
     title: "Access to the Career Tribe Community",
     para1: "Join a thriving network of like-minded professionals.",
     orange: "The Career Tribe",
@@ -15,14 +34,16 @@ const cards = [
       "community is your support system, where you'll get accountability, motivation, and networking opportunities to help you grow.",
   },
   {
-    image: bonus2,
+    image: bonus1,
+    icon: icon2,
     title: "15-Minutes a Day Commitment",
     para1: "This program is designed to fit into your busy life. Simply invest",
     orange: "15 minutes a day for 8 weeks",
     para2: ", and watch your career transform before your eyes.",
   },
   {
-    image: bonus3,
+    image: bonus4,
+    icon: icon3,
     title: "Exclusive 2-Day Live Masterclass with Coach Teja Gudluru",
     para1: "Gain access to an exclusive, live 2-day masterclass with",
     orange: "Coach Teja Gudluru",
@@ -30,7 +51,8 @@ const cards = [
       ", where you'll deep-dive into advanced career growth strategies and get personal insights from an industry expert.",
   },
   {
-    image: bonus4,
+    image: bonus3,
+    icon: icon4,
     title: "Access to exclusive jobs from our partners and Community",
     para1:
       "We have partnered with one of the best recruitment and staffing companies -",
@@ -52,14 +74,16 @@ const TopClients = ({ handlePayment }) => {
           <div className="h-[1px] hidden lg:block rounded-full w-20 bg-theme-orange"></div>
         </div>
         <div className="bg-navy-blue w-full max-w-[82rem] rounded-[3.2rem] lg:h-56 mt-8 mb-20 flex flex-wrap items-center justify-center py-4">
-          {[1, 1, 1, 1, 1, 1, 1, 1].map((_, index) => (
+          {logoimages.map((image, index) => (
             <div
               key={index}
-              className="flex items-center justify-center h-20 w-1/2 lg:w-1/4"
+              className="flex items-center justify-center h-20 w-1/2 lg:w-1/4 p-5 lg:p-3"
             >
-              <p className="text-3xl uppercase font-bold text-white">
-                facebook
-              </p>
+              <Image
+                src={image}
+                className="w-full h-full object-contain"
+                alt=""
+              />
             </div>
           ))}
         </div>
@@ -84,8 +108,12 @@ const TopClients = ({ handlePayment }) => {
                 />
                 <div className="absolute z-10 h-full pt-4 bg-black bg-opacity-70 bottom-0 w-full pb-5 left-0 px-3 lg:px-5 flex flex-col items-center justify-center">
                   <div className="w-full flex items-start lg:items-center gap-3">
-                    <p className="aspect-square rounded-lg lg:rounded-xl flex bg-theme-orange w-8 min-w-8 lg:w-10 lg:h-10 items-center justify-center mt-2">
-                      {/* <GiCheckMark /> */}
+                    <p className="aspect-square rounded-lg lg:rounded-xl flex bg-theme-orange w-8 min-w-8 lg:w-12 lg:h-12 items-center justify-center mt-2 p-1">
+                      <Image
+                        src={item.icon}
+                        className="w-full h-full object-contain"
+                        alt=""
+                      />
                     </p>
                     <p className="text-white font-helveticaNow text-wrap text-[1rem] lg:text-2xl font-bold">
                       {item.title}

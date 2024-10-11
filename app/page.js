@@ -15,9 +15,6 @@ export default function Home() {
 
   useEffect(() => {
     // Ensure Razorpay SDK is loaded
-    const razorpayKeyId = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID;
-    console.log(razorpayKeyId)
-
     const script = document.createElement("script");
     script.src = "https://checkout.razorpay.com/v1/checkout.js";
     script.async = true;

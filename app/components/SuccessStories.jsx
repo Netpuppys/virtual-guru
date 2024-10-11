@@ -40,7 +40,7 @@ const SuccessStories = () => {
           <Carousel />
         </div>
       </div>
-      <div className="w-full pt-[2.8rem] pb-[6rem] flex flex-col items-center justify-start">
+      <div className="w-full pt-[2.8rem] pb-4 lg:pb-[6rem] flex flex-col items-center justify-start">
         <div className="flex items-center justify-center gap-10">
           <div className="w-20 hidden lg:block h-[1px] bg-theme-orange"></div>
           <p className="uppercase text-[1.375rem] lg:text-[2.5rem] text-theme-orange font-bold font-helveticaNow text-center">
@@ -53,7 +53,7 @@ const SuccessStories = () => {
         </p>
 
         <div className="w-full h-fit overflow-x-auto no-scrollbar">
-          <div className="w-full min-w-[80rem] mb-20 mt-16 flex items-center justify-start lg:justify-between gap-[1.75rem] px-12">
+          <div className="w-full min-w-[80rem] mb-6 lg:mb-20 mt-8 lg:mt-16 flex items-center justify-start lg:justify-between gap-[1.75rem] px-16 lg:px-12">
             {[1, 1, 1, 1].map((_, index) => (
               <div
                 key={index}
@@ -67,15 +67,15 @@ const SuccessStories = () => {
           And some more .....
         </p>
 
-        <div className="mt-[4rem] w-full overflow-x-auto overflow-y-visible no-scrollbar lg:px-20">
-          <div className="w-fit lg:w-full flex items-center px-10 lg:px-0 justify-start gap-8">
+        <div className="lg:mt-[4rem] w-full overflow-x-auto overflow-y-visible no-scrollbar lg:px-20">
+          <div className="w-fit lg:w-full flex items-start lg:items-center px-10 lg:px-0 justify-start gap-8">
             {cards.map((item, index) => (
               <div
                 key={index}
-                className="w-[80vw] lg:min-w-[25rem] lg:w-[30rem] lg:h-[18rem] relative bg-white pt-[3.5rem] text-center px-4 pb-4 rounded-3xl mt-[3.5rem]"
+                className="w-[80vw] lg:min-w-[25rem] lg:w-[30rem] lg:h-[16rem] relative bg-white pt-[1.5rem] text-center px-8 pb-4 rounded-3xl mt-4 lg:mt-[3.5rem]"
               >
-                <div className="absolute top-0 z-10 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[6.5rem] aspect-square rounded-full border border-white bg-navy-blue"></div>
-                <div className="w-full h-full overflow-y-auto no-scrollbar">
+                {/* <div className="absolute top-0 z-10 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[6.5rem] aspect-square rounded-full border border-white bg-navy-blue"></div> */}
+                <div className="w-full h-full overflow-y-auto no-scrollbar flex flex-col items-center justify-between">
                   <p className="text-[1rem] lg:text-[1.2rem]  text-navy-blue text-pretty ">
                     &quot;{item.para}&quot;
                   </p>

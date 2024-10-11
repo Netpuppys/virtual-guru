@@ -30,7 +30,7 @@ const cards = [
     para: "Learn how to craft an exceptional LinkedIn profile and use networking strategies to open new doors and build professional connections.",
   },
   {
-    image: placeholder,
+    image: interview,
     title: "Job Search Mastery",
     para: "Become a job search pro with advanced strategies, tools, and techniques to land your ideal job faster.",
   },
@@ -40,7 +40,7 @@ const cards = [
     para: "Develop the confidence and skills needed to ace interviews. Learn proven techniques to make a lasting impression",
   },
   {
-    image: placeholder,
+    image: streetsmart,
     title: "Street-smart Communication",
     para: "Stand out in any situation with powerful communication skills. Learn how to connect, influence, and persuade with confidence.",
   },

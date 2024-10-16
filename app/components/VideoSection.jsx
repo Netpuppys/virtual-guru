@@ -15,7 +15,7 @@ const VideoSection = () => {
   return (
     <div className="w-full bg-navy-blue pt-10 px-6 lg:pt-40 pb-24 lg:pb-44 flex items-center lg:px-32 justify-center flex-col">
       <div className="aspect-video w-[90%] overflow-hidden mb-10 lg:mb-20 rounded-3xl shadow-sm bg-black">
-      {/* <video
+        {/* <video
           src={longVideo}
           className="w-full h-full rounded-3xl"
           autoPlay
@@ -26,21 +26,20 @@ const VideoSection = () => {
         >
           Your browser does not support the video tag.
         </video> */}
-        {/* <iframe 
-          title="vimeo-player" 
-          src="https://player.vimeo.com/video/1017897803?h=532ba321f6" 
-          // width="640" 
-          // height="360" 
+        <iframe
+          title="vimeo-player"
+          src="https://player.vimeo.com/video/1020106206?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          // width="640"
+          // height="360"
           frameborder="0"
           className="w-full h-full"
-          >
-          </iframe> */}
+        ></iframe>
       </div>
 
       <p className="text-[1.6rem] lg:text-[2.5rem] text-white font-extrabold leading-relaxed tracking-[0.10125rem]">
         Whatever you think is your weakness doesn&apos;t matter! Every one can
-        grow <span className="text-theme-orange">exponentially</span>{" "}
-        in their careers and easily get a{" "}
+        grow <span className="text-theme-orange">exponentially</span> in their
+        careers and easily get a{" "}
         <span className="text-theme-orange">2X hike</span> just within{" "}
         <span className="text-theme-orange">8 weeks!</span> with the{" "}
         <span className="text-theme-orange">CGP ACT Program!</span>

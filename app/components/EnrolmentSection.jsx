@@ -1,9 +1,9 @@
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
-import icon1 from "../../public/icons/icon1.png"
-import icon2 from "../../public/icons/icon2.png"
-import icon3 from "../../public/icons/icon3.png"
-import icon4 from "../../public/icons/icon4.png"
-import icon5 from "../../public/icons/icon5.png"
+import icon1 from "../../public/icons/icon1.png";
+import icon2 from "../../public/icons/icon2.png";
+import icon3 from "../../public/icons/icon3.png";
+import icon4 from "../../public/icons/icon4.png";
+import icon5 from "../../public/icons/icon5.png";
 import Image from "next/image";
 
 const sections = [
@@ -60,7 +60,7 @@ const sections = [
   },
 ];
 
-const EnrolmentSection = ({ handlePayment }) => {
+const EnrolmentSection = () => {
   return (
     <div className="w-full bg-navy-blue">
       <div className="w-full bg-white pt-16 px-8 lg:px-20 pb-[13rem] rounded-[3rem] flex flex-col items-center justify-start">
@@ -79,11 +79,7 @@ const EnrolmentSection = ({ handlePayment }) => {
               className="flex w-[calc(50%-0.5rem)] lg:max-w-[15rem] lg:w-[calc(20%-1.6rem)] flex-col items-center justify-center gap-6"
             >
               <div className="w-16 aspect-square rounded-2xl bg-navy-blue p-3">
-                <Image
-                  src={item.icon}
-                  className=""
-                  alt="course benefits"
-                />
+                <Image src={item.icon} className="" alt="course benefits" />
               </div>
               <p className="text-navy-blue font-medium text-center text-[0.85rem] text-pretty lg:text-xl">
                 {item.para}
@@ -93,7 +89,7 @@ const EnrolmentSection = ({ handlePayment }) => {
         </div>
 
         <button
-          onClick={handlePayment}
+          onClick={(window.location.href = "https://rzp.io/rzp/UJK8Ht7A")}
           className="font-helveticaNow lg:flex-row lg:max-w-none lg:w-fit shadow-orange-glow cursor-pointer w-full max-w-[30rem] active:bg-white lg:hover:animate-color-fade lg:hover:text-theme-orange lg:hover:bg-white mt-[3.75rem] text-navy-blue text-[0.9rem] text-nowrap lg:text-[1.5rem] font-bold tracking-widest bg-theme-orange px-10 lg:px-20 h-20 lg:h-16 flex flex-col items-center justify-center rounded-2xl lg:rounded-full "
         >
           Enroll Now for INR 2999 + GST
@@ -124,7 +120,7 @@ const EnrolmentSection = ({ handlePayment }) => {
         </div>
 
         <button
-          onClick={handlePayment}
+          onClick={(window.location.href = "https://rzp.io/rzp/UJK8Ht7A")}
           className="font-helveticaNow shadow-orange-glow cursor-pointer w-full max-w-[30rem] active:bg-white lg:hover:animate-color-fade lg:hover:text-theme-orange lg:hover:bg-white mt-[3.75rem] text-navy-blue text-[0.9rem] text-nowrap lg:text-[1.5rem] font-bold tracking-widest bg-theme-orange px-10 lg:px-20 h-20 lg:h-16 flex flex-col lg:flex-row lg:max-w-none lg:w-fit items-center justify-center rounded-2xl lg:rounded-full "
         >
           Enroll Now for INR 2999 + GST

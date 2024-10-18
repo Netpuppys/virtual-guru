@@ -1,27 +1,25 @@
 import Image from "next/image";
-import bonus1 from "../../public/bonus/bonus1.png"
-import bonus2 from "../../public/bonus/bonus2.png"
-import bonus3 from "../../public/bonus/bonus3.png"
-import bonus4 from "../../public/bonus/bonus4.png"
+import bonus1 from "../../public/bonus/bonus1.png";
+import bonus2 from "../../public/bonus/bonus2.png";
+import bonus3 from "../../public/bonus/bonus3.png";
+import bonus4 from "../../public/bonus/bonus4.png";
 import Timer from "./ui/Timer";
 
-import logo1 from "../../public/logos/logo1.png"
-import logo2 from "../../public/logos/logo2.png"
-import logo3 from "../../public/logos/logo3.png"
-import logo4 from "../../public/logos/logo4.png"
-import logo5 from "../../public/logos/logo5.png"
-import logo6 from "../../public/logos/logo6.png"
-import logo7 from "../../public/logos/logo7.png"
-import logo8 from "../../public/logos/logo8.png"
+import logo1 from "../../public/logos/logo1.png";
+import logo2 from "../../public/logos/logo2.png";
+import logo3 from "../../public/logos/logo3.png";
+import logo4 from "../../public/logos/logo4.png";
+import logo5 from "../../public/logos/logo5.png";
+import logo6 from "../../public/logos/logo6.png";
+import logo7 from "../../public/logos/logo7.png";
+import logo8 from "../../public/logos/logo8.png";
 
-import icon1 from "../../public/logos/icon1.png"
-import icon2 from "../../public/logos/icon2.png"
-import icon3 from "../../public/logos/icon3.png"
-import icon4 from "../../public/logos/icon4.png"
+import icon1 from "../../public/logos/icon1.png";
+import icon2 from "../../public/logos/icon2.png";
+import icon3 from "../../public/logos/icon3.png";
+import icon4 from "../../public/logos/icon4.png";
 
-const logoimages = [
-  logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8
-]
+const logoimages = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8];
 
 const cards = [
   {
@@ -62,7 +60,7 @@ const cards = [
   },
 ];
 
-const TopClients = ({ handlePayment }) => {
+const TopClients = () => {
   return (
     <div className="w-full bg-navy-blue">
       <div className="w-full bg-white rounded-[3rem] pt-16 pb-24 flex flex-col items-center justify-start lg:px-20">
@@ -137,7 +135,7 @@ const TopClients = ({ handlePayment }) => {
         <Timer />
 
         <button
-          onClick={handlePayment}
+          onClick={(window.location.href = "https://rzp.io/rzp/UJK8Ht7A")}
           className="bg-theme-orange cursor-pointer hover:animate-color-fade hover:text-theme-orange hover:bg-white mt-10 shadow-lg w-[17rem] lg:w-[27rem] h-12 lg:h-16 font-helveticaNow font-black text-white text-[0.9rem] lg:text-[1.5rem] tracking-widest rounded-full flex items-center justify-center"
         >
           ENROLL NOW

@@ -6,7 +6,7 @@ import { IoIosArrowRoundDown } from "react-icons/io";
 const description =
   "Are you ready to transform your career in just 15 minutes a day? Introducing CGP ACT (Accelerated Career Trajectory)—the only program that delivers a personalized career growth plan based on your unique strengths, aspirations, and growth areas. Priced at just INR 2999 + GST, you'll get access to an 8-week transformative journey that will revolutionize your career—all by investing just 15 minutes a day.";
 
-const Hero = ({ handlePayment }) => {
+const Hero = () => {
   return (
     <div className="w-full lg:pt-32 relative flex items-center flex-col justify-center bg-navy-blue lg:bg-white">
       <div className="w-full bg-white pt-16 lg:pt-0 flex items-start px-10 rounded-bl-[2rem] rounded-br-[2rem] lg:rounded-none flex-col lg:flex-row max-w-[90rem]">
@@ -24,7 +24,9 @@ const Hero = ({ handlePayment }) => {
           </p>
 
           <button
-            onClick={handlePayment}
+            onClick={() => {
+              window.location.href = "https://rzp.io/rzp/UJK8Ht7A";
+            }}
             className="bg-theme-orange cursor-pointer hover:animate-color-fade hover:text-theme-orange hover:bg-white mt-10 shadow-lg w-64 h-14 font-helveticaNow font-black text-white text-lg tracking-wide rounded-full flex items-center justify-center"
           >
             ENROLL NOW

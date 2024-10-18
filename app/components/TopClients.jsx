@@ -135,7 +135,9 @@ const TopClients = () => {
         <Timer />
 
         <button
-          onClick={(window.location.href = "https://rzp.io/rzp/UJK8Ht7A")}
+          onClick={() => {
+            window.location.href = "https://rzp.io/rzp/UJK8Ht7A";
+          }}
           className="bg-theme-orange cursor-pointer hover:animate-color-fade hover:text-theme-orange hover:bg-white mt-10 shadow-lg w-[17rem] lg:w-[27rem] h-12 lg:h-16 font-helveticaNow font-black text-white text-[0.9rem] lg:text-[1.5rem] tracking-widest rounded-full flex items-center justify-center"
         >
           ENROLL NOW

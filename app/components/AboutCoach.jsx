@@ -65,7 +65,9 @@ const AboutCoach = () => {
         ))}
       </div>
       <button
-        onClick={(window.location.href = "https://rzp.io/rzp/UJK8Ht7A")}
+        onClick={() => {
+          window.location.href = "https://rzp.io/rzp/UJK8Ht7A";
+        }}
         className="font-helveticaNow lg:flex-row lg:max-w-none lg:w-fit shadow-orange-glow cursor-pointer w-full max-w-[30rem] active:bg-white lg:hover:animate-color-fade lg:hover:text-theme-orange lg:hover:bg-white mt-[3.75rem] text-navy-blue text-[0.9rem] text-nowrap lg:text-[1.5rem] font-bold tracking-widest bg-theme-orange px-10 lg:px-20 h-20 lg:h-16 flex flex-col items-center justify-center rounded-2xl lg:rounded-full "
       >
         Enroll Now for INR 2999 + GST

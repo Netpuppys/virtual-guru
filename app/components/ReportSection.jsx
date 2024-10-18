@@ -85,7 +85,7 @@ const ReportSection = () => {
 
             <div className="w-full pt-14 px-8 lg:px-0 flex items-center no-scrollbar justify-start lg:justify-center gap-4 lg:gap-10 overflow-x-auto lg:overflow-visible">
                 {reportImages.map((image, index) => (
-                    <div key={index} className='w-full min-h-[15rem] min-w-[80vw] lg:min-h-0 lg:w-[calc(25%-2.5rem)] aspect-[4/3] bg-black rounded-2xl overflow-hidden'>
+                    <div key={index} className='w-full min-h-[15rem] min-w-[80vw] lg:min-w-0 lg:min-h-0 lg:w-[calc(25%-2.5rem)] aspect-[4/3] bg-black rounded-2xl overflow-hidden'>
                         <Image
                             src={image}
                             className='w-full h-full object-cover'

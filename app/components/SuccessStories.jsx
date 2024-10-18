@@ -1,5 +1,13 @@
 import Carousel from "./ui/Carousel";
 
+const testimonials = [
+  "https://player.vimeo.com/video/1020875511?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+  "https://player.vimeo.com/video/1020875537?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+  "https://player.vimeo.com/video/1020875638?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+  "https://player.vimeo.com/video/1020875562?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+  "https://player.vimeo.com/video/1020875621?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+]
+
 const cards = [
   {
     para: "I loved the personalized approach of this program! The Niche Clarity module helped me pivot into a career that truly aligns with my strengths. Teja's insights are practical and on-point.",
@@ -54,11 +62,21 @@ const SuccessStories = () => {
 
         <div className="w-full h-fit overflow-x-auto no-scrollbar">
           <div className="w-full min-w-[80rem] mb-6 lg:mb-20 mt-8 lg:mt-16 flex items-center justify-start lg:justify-between gap-[1.75rem] px-16 lg:px-12">
-            {[1, 1, 1, 1].map((_, index) => (
+            {testimonials.map((video, index) => (
               <div
                 key={index}
-                className="w-1/4 aspect-square bg-black rounded-3xl"
-              ></div>
+                className="w-1/5 aspect-square bg-black rounded-3xl overflow-hidden flex items-center justify-center"
+              >
+                <iframe 
+                  title="vimeo-player" 
+                  src={video}
+                  width="640" 
+                  height="360" 
+                  // frameBorder="0"
+                  // allowfullscreen
+                  className="w-full h-full object-cover"
+                />
+              </div>
             ))}
           </div>
         </div>

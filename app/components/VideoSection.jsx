@@ -1,6 +1,6 @@
 import { GiCheckMark } from "react-icons/gi";
-// import longVideo from "../../public/video/longVideo.mp4";
-// import FileLoader from "fileloader";
+import React, { useEffect, useRef, useState } from "react";
+import Player from "@vimeo/player";
 
 const points = [
   "Do you think you have weak communication skills?",
@@ -12,32 +12,112 @@ const points = [
 ];
 
 const VideoSection = () => {
+  const videoRef = useRef(null);
+  const playerRef = useRef(null);
+  const [isUserInteracted, setIsUserInteracted] = useState(false);
+
+  useEffect(() => {
+    console.log("Initializing Vimeo player...");
+
+    // Initialize the Vimeo player when the component mounts
+    playerRef.current = new Player(videoRef.current);
+
+    // Ensure player is properly initialized
+    playerRef.current
+      .ready()
+      .then(() => {
+        console.log("Vimeo player is ready.");
+        // Start with volume muted to comply with browser autoplay policies
+        playerRef.current.setVolume(0);
+      })
+      .catch((error) => {
+        console.error("Error initializing Vimeo player:", error);
+      });
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          console.log("Video is in view, attempting to play muted...");
+          playerRef.current.play().catch(() => {
+            console.log("Autoplay failed, waiting for user interaction.");
+          });
+        } else {
+          console.log("Video is out of view, pausing...");
+          playerRef.current.pause();
+        }
+      },
+      { threshold: 0.5 } // Adjust the threshold as needed
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      // Cleanup the observer when the component unmounts
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
+  // Function to handle user interaction to unmute the video
+  const handleUserInteraction = () => {
+    console.log("User interaction detected, attempting to unmute the video...");
+    if (!isUserInteracted && playerRef.current) {
+      playerRef.current
+        .setVolume(1)
+        .then(() => {
+          console.log("Video volume set to maximum.");
+        })
+        .catch((error) => {
+          console.error("Failed to set volume:", error);
+        });
+
+      // Attempt to play the video after interaction
+      playerRef.current
+        .play()
+        .then(() => {
+          console.log("Video is now playing with sound.");
+        })
+        .catch((error) => {
+          console.error("Error playing video after interaction:", error);
+        });
+
+      setIsUserInteracted(true); // Mark the interaction as handled
+    }
+  };
+
+  useEffect(() => {
+    console.log("Adding event listeners for user interactions...");
+    // Add event listeners for user interactions
+    window.addEventListener("click", handleUserInteraction);
+    window.addEventListener("touchstart", handleUserInteraction);
+
+    return () => {
+      console.log("Cleaning up event listeners...");
+      // Clean up event listeners when the component unmounts
+      window.removeEventListener("click", handleUserInteraction);
+      window.removeEventListener("touchstart", handleUserInteraction);
+    };
+  }, [isUserInteracted]);
+
   return (
     <div className="w-full bg-navy-blue pt-10 px-6 lg:pt-40 pb-24 lg:pb-44 flex items-center lg:px-32 justify-center flex-col">
-      <div className="aspect-video w-[90%] overflow-hidden mb-10 lg:mb-20 rounded-3xl shadow-sm bg-black">
-        {/* <video
-          src={longVideo}
-          className="w-full h-full rounded-3xl"
-          autoPlay
-          loop
-          muted
-          playsInline
-          controls
-        >
-          Your browser does not support the video tag.
-        </video> */}
+      <div
+        ref={videoRef}
+        className="aspect-video w-[90%] overflow-hidden mb-10 lg:mb-20 rounded-3xl shadow-sm bg-black"
+      >
         <iframe
-          title="vimeo-player"
-          src="https://player.vimeo.com/video/1020106206?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-          // width="640"
-          // height="360"
-          frameborder="0"
+          src="https://player.vimeo.com/video/1020106206?autoplay=0" // autoplay is set to 0 as we control it via JS
+          frameBorder="0"
+          allow="autoplay; fullscreen"
           className="w-full h-full"
         ></iframe>
       </div>
 
       <p className="text-[1.6rem] lg:text-[2.5rem] text-white font-extrabold leading-relaxed tracking-[0.10125rem]">
-        Whatever you think is your weakness doesn&apos;t matter! Every one can
+        Whatever you think is your weakness doesn&apos;t matter! Everyone can
         grow <span className="text-theme-orange">exponentially</span> in their
         careers and easily get a{" "}
         <span className="text-theme-orange">2X hike</span> just within{" "}

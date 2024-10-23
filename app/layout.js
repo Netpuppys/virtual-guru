@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Script from "next/script";
+import Image from "next/image";
 
 // Importing Poppins from Google Fonts
 const poppins = Poppins({
@@ -58,30 +59,23 @@ export default function RootLayout({ children }) {
           }}
         />
         <noscript>
-          <img
+          <Image
             height="1"
             width="1"
+            alt=""
             style={{ display: "none" }}
             src="https://www.facebook.com/tr?id=3520646018188374&ev=PageView&noscript=1"
           />
         </noscript>
 
         <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-JRLLDD95GY"
-        />
-        <Script
           id="gtag"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag() {
-                dataLayer.push(arguments);
-              }
-              gtag("js", new Date());
-              gtag("config", "G-JRLLDD95GY");
-            `,
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-T4M7X33H');`,
           }}
         />
         <Script
@@ -108,6 +102,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.variable} ${helveticaNow.variable} ${TTChocolates.variable} font-tt-chocolates antialiased`}
       >
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-T4M7X33H"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         {children}
       </body>
     </html>

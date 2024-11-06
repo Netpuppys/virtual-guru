@@ -109,9 +109,10 @@ const VideoSection = () => {
         className="aspect-video w-[90%] overflow-hidden mb-10 lg:mb-20 rounded-3xl shadow-sm bg-black"
       >
         <iframe
-          src="https://player.vimeo.com/video/1020106206?autoplay=0" // autoplay is set to 0 as we control it via JS
-          frameBorder="0"
-          allow="autoplay; fullscreen"
+          title="vimeo-player"
+          src="https://player.vimeo.com/video/1020106206?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          // width="640"
+          // height="360"
           className="w-full h-full"
         ></iframe>
       </div>
